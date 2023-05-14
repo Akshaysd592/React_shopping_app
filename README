@@ -1,0 +1,19 @@
+This is a single page shopping react application Where you can add items to shopping card 
+
+In shopping cart section you can also remove it 
+It will automatically calculate the total items selected and total Cost to be paid
+
+
+This project was created when learning new concept on REDUX for handling states in react 
+
+
+Tech use is :
+
+React , REDUX . 
+
+styling : Tailwindcss
+
+Free Api : For fetching  data .
+
+
+LIVE LINK: 
