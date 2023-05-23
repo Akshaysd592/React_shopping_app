@@ -18,15 +18,15 @@ const Cart = () => {
   }, [cart])
 
   return (
-    <div className="flex items-center justify-center  h-screen bg-gradient-to-r from-violet-500 to-fuchsia-500 overflow-x-hidden ">
+    <div className=" items-center justify-center  h-screen bg-gradient-to-r from-violet-500 to-fuchsia-500 overflow-x-hidden  ">
   {
     cart.length > 0  ? 
     (
       
-    <div className="flex   gap-5 justify-center items-center ">
+    <div className="flex  flex-col sm:flex-row  gap-5 justify-center items-center ">
 
 
-      <div className="grid grid-cols-3 grid-row-5 max-w-xl  snap-y snap-mandatory snap-x-none rounded-md  gap-6 px-4 py-6">
+      <div className="grid sm:grid-cols-2 content-center  lg:grid-row-3 md:grid-cols-3 xl:grid-cols-4 max-w-xl xl:max-w-4xl rounded-md  gap-4 px-4 py-2">
         {
           cart.map( (item,index) => {
             return <CartItem key={item.id} item={item} itemIndex={index} />
@@ -43,17 +43,17 @@ const Cart = () => {
 
       <div className="flex flex-col gap-10 snap-none  ">
 
-        <div className=" flex flex-col justify-center items-center mx-8 gap-8 ">
-          <div className="text-black-700 font-semibold text-lg   w-40 mt-1">Your Cart</div>
-          <div className="text-black-700 font-semibold text-lg   w-40 mt-1">Summary</div>
-          <p className="text-black-700 font-semibold text-lg   w-40 mt-1">
+        <div className=" flex flex-col mx-8  gap-8 ">
+          <div className="text-black-700 font-semibold text-lg   w-30 mt-1">Your Cart</div>
+          <div className="text-black-700 font-semibold text-lg   w-30 mt-1">Summary</div>
+          <p className="text-black-700 font-semibold text-lg   w-30 mt-1">
             <span>Total Items: {cart.length}</span>
           </p>
         </div>
 
-        <div className="flex flex-col gap-5  text-black-700 font-semibold text-lg max-w-4 w-40 mt-1 mx-8 my-4 ">
-          <p >Total Amount: ${totalAmount}</p>
-          <button className="border-2 border-sky-500 bg-white rounded px-4 flex align-middle py-4 text-sm uppercase ">
+        <div className="flex flex-col gap-8 content-center text-black-700 font-semibold text-lg  w-30 mt-1 px-8 my-4 ">
+          <p  >Total Amount: ${totalAmount}</p>
+          <button className="border-2 border-sky-500 bg-white rounded px-4 w-[70%] md:px-2 flex content-center py-4 text-sm uppercase ">
             CheckOut Now
           </button>
         </div>
